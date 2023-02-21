@@ -21,3 +21,9 @@ Rails.application.routes.draw do
   #delete
   delete '/tasks/:id', to: 'tasks#destroy'
 end
+
+## Refactoring ##
+
+# Rails.application.routes.draw do
+# resources :restaurants
+# end
