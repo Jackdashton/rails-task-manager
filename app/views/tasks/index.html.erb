@@ -1,0 +1,9 @@
+<h1>Tasks</h1>
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li><%= link_to task.title, task_path(task) %></li>
+    <%# task in the () is passing an instance of the iterator placeholder task %>
+    <%# creates link using title of task, path to task instance %>
+  <% end %>
+</ul>

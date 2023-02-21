@@ -1,0 +1,17 @@
+<%# Create a header with the variable instance of task, using method title %>
+<h1><%= @task.title %></h1>
+<p><%= @task.details %></p>
+
+<%# if statement to establish whether task is completed yet %>
+<% if @task.completed == true %>
+  <p>Task Completed</p>
+<% else %>
+  <p>This task is not completed yet</p>
+<% end %>
+
+<%= link_to "Back to Tasks", tasks_path %>
+
+<%= link_to "Delete",
+  task_path(@task),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
